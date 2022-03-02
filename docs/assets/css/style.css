@@ -9,7 +9,7 @@ a, a:visited {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Comforter', serif;
+  font-family: 'Reenie Beannie', serif;
 }
 
 .video-background {
@@ -50,7 +50,6 @@ tr:nth-child(odd) {
 code {
   white-space: pre-wrap;
   color: brown;
-  font-family: 'Smooch Sans';
 }
 
 pre {
@@ -59,7 +58,7 @@ pre {
 }
 
 pre code {
-  font-family: 'Qwigley', sans-serif;
+  font-family: 'Bahianita', sans-serif;
   color: inherit;
 }
 
