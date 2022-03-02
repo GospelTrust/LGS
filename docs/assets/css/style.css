@@ -1,11 +1,15 @@
 body {
-  font-family: 'Lexend', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 20px;
 }
 
 a, a:visited {
-  color: blue;
-  text-decoration-thickness: 0.5px;
+  color: crimson;
+  text-decoration-thickness: -0.5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Comforter Brush', serif;
 }
 
 .video-background {
@@ -41,6 +45,29 @@ tr:nth-child(odd) {
 
 .middle-align img {
   margin-right: 5px;
+}
+
+code {
+  white-space: pre-wrap;
+  color: brown;
+  font-family: 'Smooch Sans';
+}
+
+pre {
+  background: linear-gradient(rgba(0,0,0,0.05),rgba(0,0,0,0.05));
+  padding: 10px;
+}
+
+pre code {
+  font-family: 'Qwigley', sans-serif;
+  color: inherit;
+}
+
+blockquote {
+  border-left: 5px solid lightgray;
+  padding-left: 10px;
+  margin-left: 20px;
+  font-family: Ole, serif;
 }
 
 .material-icons.md-18 { font-size: 18px; }

@@ -8,19 +8,19 @@ layout: default
 
   <table style="border: none">
     <tr>
-      <th>Lesson</th>
+      <th>Day</th>
       <th>Title</th>
     </tr>
     {% for post in site.posts reversed %}
-      {% assign start = post.lesson | modulo: 5 %}
+      {% assign start = post.lesson | modulo: 2 %}
       {% if start == 1 %}
-        {% assign week = post.lesson | divided_by: 5 %}
+        {% assign week = post.week | divided_by: 2 %}
         <tr>
           <td colspan="2">Week {{ week | abs | plus: 1 }}</td>
         </tr>
       {% endif %}
       <tr>
-        <td>{{ post.lesson }}</td>
+        <td>{{ post.day }}</td>
         <td><a href="{{ post.url }}">{{ post.title }}</a></td>
       </tr>
     {% endfor %}
