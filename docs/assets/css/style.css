@@ -1,6 +1,7 @@
 body {
-  font-family: 'Smooch Sans', 'Noto Sans', sans-serif;
-  font-size: 20px;
+  font-family: 'Smooch Sans', sans-serif;
+  font-size: 30px;
+  line-height: 1.3em;
 }
 
 a, a:visited {
@@ -13,9 +14,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   color: deeppink;
 }
-
-h1 { font-size: 3rem; }
-h2 { font-size: 2.5rem; }
 
 .video-background {
   position: relative;
