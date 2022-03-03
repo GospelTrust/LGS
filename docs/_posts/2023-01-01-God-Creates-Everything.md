@@ -10,6 +10,6 @@ day: 1
 
 Week {{ page.week }} Day {{ page.day }}
 
-{% include_relative chapters/en/{{ page.week }}-{{ page.day }}.md %}
-
 {% include_relative chapters/vi/{{ page.week }}-{{ page.day }}.md %}
+
+{% include_relative chapters/en/{{ page.week }}-{{ page.day }}.md %}
