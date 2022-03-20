@@ -43,6 +43,7 @@ sub parse {
         }
 
         if ($section == 1 && $start == 2) {
+            print $out qq{layout: day\n};
             print $out qq{---\n\n};
             $start = 0;
 

@@ -1,3 +1,4 @@
 docs/_site
 .jekyll-cache/
 jekyll.sh
+*.swp
