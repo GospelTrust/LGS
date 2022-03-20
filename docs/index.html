@@ -1,28 +1,25 @@
 ---
-layout: default
+layout: index
 ---
 
-<center>
-  <img src="/assets/logo.svg" width="100"/>
-  <h1>{{ site.title }}</h1>
+<a class="center-align" href="/">
+  <img src="/assets/logo.svg" width="100" title="{{ site.title }}"/>
+  <h2 style="margin:0">{{ site.title }}</h2>
+</a>
 
-  <table style="border: none">
-    <tr>
-      <th>Day</th>
-      <th>Title</th>
-    </tr>
-    {% for post in site.posts reversed %}
-      {% assign start = post.lesson | modulo: 2 %}
-      {% if start == 1 %}
-        {% assign week = post.week | divided_by: 2 %}
-        <tr>
-          <td colspan="2">Week {{ week | abs | plus: 1 }}</td>
-        </tr>
-      {% endif %}
-      <tr>
-        <td>{{ post.day }}</td>
-        <td><a href="{{ post.url }}">{{ post.title }}</a></td>
-      </tr>
-    {% endfor %}
-  </table>
-</center>
+<ul>
+  {% for lang in site.collections %}
+    {% assign info = site.data.languages[lang.label] %}
+    {% if info %}
+    <li class="card-tab">
+      <div class="top-bar">{{ lang.label | upcase }}</div>
+      <div class="tab">{{ info.weeks }}</div>
+      <div class="body">
+        <p>
+          <a href="/{{ info.name }}">{{ info.title }}</a>
+        </p>
+      </div>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>

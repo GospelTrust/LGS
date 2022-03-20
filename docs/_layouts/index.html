@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    {% include head.html %}
+    <link href="{{ 'assets/css/grid.css' |  relative_url }}" rel="stylesheet">
+    <link href="{{ 'assets/css/tab.css' |  relative_url }}" rel="stylesheet">
+    <link href="{{ 'assets/css/style.css' |  relative_url }}" rel="stylesheet">
+    <style>
+    html {
+      --bg: whitesmoke;
+      --fg: forestgreen;
+      --cardWidth: 200px;
+      --cardHeight: 250px;
+      --bgColor: darkseagreen;
+    }
+    </style>
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
+

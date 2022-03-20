@@ -1,0 +1,93 @@
+.card-tab {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-image: linear-gradient(225deg, var(--fg) 50%, transparent 50%);
+  background-size: 100px 27px;
+  background-repeat: no-repeat;
+  background-position: right top;
+  border-radius: 2px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, .1);
+  border-top-width: 22px;
+  border-top-style: solid;
+  border-top-color: var(--fg);
+  background-color: var(--bg);
+  color: var(--fg);
+  text-transform: none;
+  height: calc(100% - 22px);
+}
+.top-bar, .tab {
+  color: var(--bg);
+}
+.top-bar {
+  margin: -25px 0 0 5px;
+  font-size: 25px;
+  text-align: left;
+}
+.tab {
+  position: absolute;
+  top: -15px;
+  right: 3px;
+  font-size: 50px;
+  line-height: 35px;
+  text-align: right;
+}
+.tab small {
+  display: block;
+  font-size: 21px;
+}
+.header {
+  margin: 0 60px 0 10px;
+  text-align: left;
+  line-height: 1;
+  height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.body {
+  flex-grow: 2;
+  padding: 0 10px;
+}
+.body h2 {
+  word-break: break-word;
+  margin-top: 10px;
+}
+.control {
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.control a, .control a:visited {
+  text-decoration: none;
+  background-color: #d15684;
+  color: white;
+  border-radius: 5px;
+  padding: 0 5px;
+}
+.current .control {
+  background-color: var(--secondaryBg);
+}
+.card-tab.current {
+  background-image: linear-gradient(225deg, var(--primaryBg)) 50%, transparent 50%);
+  border-top-color: var(--primaryBg);
+  color: var(--primaryFg);
+}
+.card-tab.faded {
+  background-image: linear-gradient(225deg, grey 50%, transparent 50%);
+  border-top-color: grey;
+}
+.faded .control {
+  background-color: inherit;
+}
+.current .tab,
+.current .top-bar,
+.faded .control,
+.faded .tab,
+.faded .top-bar {
+  color: inherit;
+}

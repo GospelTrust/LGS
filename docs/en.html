@@ -1,0 +1,8 @@
+---
+layout: index
+language: en
+---
+
+{% assign text = site.data.languages[page.language] %}
+
+{% include lessons.html text=text %}

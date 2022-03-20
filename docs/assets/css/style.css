@@ -1,6 +1,17 @@
+html {
+  --surfaceFg: white;
+  --surfaceBg: #ff6b6b;
+  --secondaryFg: #4ECDC4;
+  --specialFont: 'Comforter';
+  --sansFont: 'Smooch Sans';
+  --monoFont: 'Bahianita';
+  --bgColor: white;
+}
+
 body {
-  font-family: 'Smooch Sans', sans-serif;
+  font-family: var(--sansFont), sans-serif;
   font-size: 30px;
+  background-color: var(--bgColor);
 }
 
 a, a:visited {
@@ -9,7 +20,7 @@ a, a:visited {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Comforter', serif;
+  font-family: var(--specialFont), serif;
   font-weight: normal;
   color: deeppink;
 }
@@ -38,11 +49,21 @@ tr:nth-child(odd) {
   background-color: #ddd;
 }
 
+.center-align {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-direction: column;
+}
+.center-align h2 {
+  color: floralwhite;
+}
+
 .middle-align {
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  text-decoration: none;;
+  text-decoration: none;
 }
 
 .middle-align img {
@@ -52,7 +73,7 @@ tr:nth-child(odd) {
 code {
   white-space: pre-wrap;
   color: dodgerblue;
-  font-family: 'Bahianita', sans-serif;
+  font-family: var(--monoFont), sans-serif;
 }
 
 pre {
@@ -68,7 +89,7 @@ blockquote {
   border-left: 5px solid lightskyblue;
   padding-left: 10px;
   margin-left: 20px;
-  font-family: Bahianita, serif;
+  font-family: var(--monoFont), serif;
   color: cornflowerblue;
   font-size: 30px;
 }

@@ -1,2 +1,8 @@
 title: Living God's Story
 future: true
+collections_dir: content
+collections:
+  vi:
+    output: true
+  en:
+    output: true
