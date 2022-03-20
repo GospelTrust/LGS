@@ -1,1 +1,10 @@
-default.html
+<!doctype html>
+<html>
+  <head>
+    {% include lesson_head.html %}
+    <link href="{{ 'assets/css/lesson.css' |  relative_url }}" rel="stylesheet">
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
