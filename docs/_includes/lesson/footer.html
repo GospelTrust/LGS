@@ -32,7 +32,7 @@
     {% else %}
       {% if page.day == 2 %}
         {% capture url %}
-          /{{ page.collection }}/{{ prev | prepend: '00' | slice: -2, 2 | append: '-1.html' }}
+          /{{ page.collection }}/{{ next | prepend: '00' | slice: -2, 2 | append: '-1.html' }}
         {% endcapture %}
       {% else %}
         {% capture url %}
