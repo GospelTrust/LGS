@@ -30,25 +30,24 @@ sub parse {
     my $section = 0;
     my $end     = 0;
     my $start   = 1;
+    my $header  = 0;
 
     while (<$fh>) {
         if ($end) {
             $end = 0;
         }
 
-        if (/^##\s(\d+)\./) {
+        if (/^##\s(\d+)[.\:]/) {
             $section = $1;
+            $header = 1;
         } elsif (/^##\s/) {
             $section = -1;
         }
 
         if ($section == 1 && $start == 2) {
-            print $out qq{layout: day\n};
+            print $out qq{layout: lesson\n};
             print $out qq{---\n\n};
             $start = 0;
-
-            print $out "\n{% include logo.html info=page %}\n\n";
-            print $out "{% include day_head.html info=page %}\n\n";
         }
 
         if ($section == 10 || $section == -1) {
@@ -71,6 +70,11 @@ sub parse {
             }
         }
 
+        if ($header && $section >= 1 && $section <= 10) {
+            print $out "\n{% include lesson/section.html index=$section %}\n";
+            $header = 0;
+            next;
+        }
         print $out $_;
     }
 
