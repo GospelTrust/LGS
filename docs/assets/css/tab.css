@@ -18,6 +18,7 @@
 }
 .top-bar, .tab {
   color: var(--bg);
+  font-family: var(--specialFont);
 }
 .top-bar {
   margin: -25px 0 0 5px;

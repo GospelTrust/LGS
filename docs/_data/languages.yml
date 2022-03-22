@@ -3,8 +3,31 @@ en:
   weeks: 48
   day: day
   week: week
+  sections:
+  - Devotion Objective
+  - Note to Parent
+  - Opening Prayer
+  - Memory Verses
+  - Story Opening
+  - Story Background
+  - Bible Story
+  - Story Retell
+  - Story Questions
+  - Closing Prayer
+
 vi:
   title: Sống truyện của Chúa
   weeks: 48
   day: ngày
   week: tuần
+  sections:
+  - Mục tiêu tĩnh nguyện
+  - Lưu ý cho Phụ huynh
+  - Lời cầu nguyện mở đầu
+  - Câu gốc thuộc lòng
+  - Mở đầu câu chuyện
+  - Bối cảnh câu chuyện
+  - Câu chuyện Kinh thánh
+  - Kể lại câu chuyện
+  - Câu hỏi về câu chuyện
+  - Lời cầu nguyện kết thúc

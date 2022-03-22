@@ -1,0 +1,45 @@
+{% assign text = site.data.languages[page.collection] %}
+
+<div class="center-align spacer">
+
+  <div class="middle-align">
+    {{ page.title }}
+  </div>
+
+  {% assign prev = page.week | minus: 1 %}
+  {% assign next = page.week | plus: 1 %}
+
+  <div class="middle-align">
+    {% if prev <= 1 and page.day == 1 %}
+      <span class="material-icons md-48 md-disabled">navigate_before</span>
+    {% else %}
+      {% if page.day == 1 %}
+        {% capture url %}
+          /{{ page.collection }}/{{ prev | prepend: '00' | slice: -2, 2 | append: '-2.html' }}
+        {% endcapture %}
+      {% else %}
+        {% capture url %}
+          {{ page.url | replace: "-2", "-1" }}
+        {% endcapture %}
+      {% endif %}
+      <a href="{{ url }}" class="material-icons md-48">navigate_before</a>
+    {% endif %}
+
+    {{ text.week | capitalize }} {{ page.week }} / {{ text.day }} {{ page.day }}
+
+    {% if next > text.weeks and page.day == 2 %}
+      <span class="material-icons md-48 md-disabled">navigate_next</span>
+    {% else %}
+      {% if page.day == 2 %}
+        {% capture url %}
+          /{{ page.collection }}/{{ prev | prepend: '00' | slice: -2, 2 | append: '-1.html' }}
+        {% endcapture %}
+      {% else %}
+        {% capture url %}
+          {{ page.url | replace: "-1", "-2" }}
+        {% endcapture %}
+      {% endif %}
+      <a href="{{ url }}" class="material-icons md-48">navigate_next</a>
+    {% endif %}
+  </div>
+</div>

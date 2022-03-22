@@ -1,0 +1,4 @@
+{% assign text = site.data.languages[page.collection] %}
+{% assign index = include.index | minus: 1 %}
+
+<h2 class="spacer">{{ include.index }} • {{ text.sections[index] }}</h2>

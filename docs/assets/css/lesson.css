@@ -1,36 +1,54 @@
 html {
-  --surfaceFg: white;
-  --surfaceBg: #ff6b6b;
-  --secondaryFg: #4ECDC4;
-  --specialFont: 'Smooch Sans';
-  --sansFont: 'Noto Sans Display';
-  --serifFont: 'Noto Serif Display';
-  --bgColor: white;
+  --specialFont: 'Smooch Sans', sans-serif;
+  --mainFont: 'Saira Condensed', sans-serif;
+  --secondaryFont: 'Anton', sans-serif;
+  --cursiveFont: 'Comforter', sans-serif;
+  --secondaryColor: skyblue;
+  --linkColor: #142D4C;
+  --primaryColor: aliceblue;
+  --bgColor: steelblue;
+  --fgColor: ivory;
 }
 
 body {
-  font-family: var(--sansFont), sans-serif;
-  font-size: 20px;
+  font-family: var(--mainFont);
+  font-size: 1.4em;
+  line-height: 1.3em;
   background-color: var(--bgColor);
+  color: var(--fgColor);
 }
 
 a, a:visited {
-  color: deeppink;
-  text-decoration-thickness: -0.5px;
+  color: var(--linkColor);
+  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--serifFont), serif;
-  color: deeppink;
+  font-family: var(--secondaryFont);
+  font-weight: normal;
+  color: var(--secondaryColor);
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 6px;
+}
+body::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 
 code, pre {
-  font-family: var(--specialFont), sans-serif;
+  font-family: var(--specialFont);
 }
 
 code {
   white-space: pre-wrap;
-  font-size: 20px;
+  font-size: 27px;
+  color: var(--primaryColor);
 }
 
 pre {
@@ -43,17 +61,18 @@ pre code {
 }
 
 blockquote {
-  border-left: 5px solid lightskyblue;
+  border-left: 5px solid var(--primaryColor);
   padding-left: 10px;
   margin-left: 20px;
-  font-family: var(--specialFont), serif;
+  font-family: var(--specialFont);
   font-size: 30px;
 }
 
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
+.md-18 { font-size: 18px; }
+.md-24 { font-size: 24px; }
+.md-36 { font-size: 36px; }
+.md-48 { font-size: 48px; }
+.md-disabled { color: rgba(0,0,0,0.1); }
 
 .buttons {
   margin-bottom: 1em;
@@ -78,9 +97,31 @@ blockquote {
   align-items: center;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
 }
 
 .middle-align img {
   margin-right: 5px;
 }
 
+.spacer {
+  margin-top: 100px;
+}
+.middle-spacer {
+  justify-content: space-around;
+  width: 200px;
+}
+
+.center-align {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-direction: column;
+}
+
+.cursive-head {
+  font-family: var(--cursiveFont);
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+}

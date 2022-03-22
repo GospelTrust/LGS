@@ -1,0 +1,44 @@
+{% assign text = site.data.languages[page.collection] %}
+
+<div class="center-align spacer">
+  <div class="cursive-head">{{ page.title }}</div>
+
+  {% assign prev = page.week | minus: 1 %}
+  {% assign next = page.week | plus: 1 %}
+
+  <div class="middle-align spacer">
+    {% if prev > 0 %}
+      {% capture p %}{{ prev | prepend: '00' | slice: -2, 2 | append: '-2.html' }}{% endcapture %}
+      <a href="/{{ page.collection }}/{{ p }}" class="material-icons md-48">navigate_before</a>
+    {% else %}
+      <span class="material-icons md-48 md-disabled">navigate_before</span>
+    {% endif %}
+
+    {{ text.week | capitalize }} {{ page.week }}
+
+    {% if next <= text.weeks %}
+      {% capture p %}{{ next | prepend: '00' | slice: -2, 2 | append: '-1.html' }}{% endcapture %}
+      <a href="/{{ page.collection }}/{{ p }}" class="material-icons md-48">navigate_next</a>
+    {% else %}
+      <span class="material-icons md-48 md-disabled">navigate_next</span>
+    {% endif %}
+  </div>
+
+  <div class="middle-align middle-spacer">
+    {% if page.day == 1 %}
+      <span class="material-icons md-36">looks_one</span>
+    {% else %}
+      <a href={{ page.url | replace: "-2", "-1" }} class="material-icons-outlined md-36">looks_one</a>
+    {% endif %}
+
+    {{ text.day | capitalize }}
+
+    {% if page.day == 2 %}
+      <span class="material-icons md-36">looks_two</span>
+    {% else %}
+      <a href={{ page.url | replace: "-1", "-2" }} class="material-icons-outlined md-36">looks_two</a>
+    {% endif %}
+  </div>
+
+  <div class="spacer">{{ page.bible }}</div>
+</div>
